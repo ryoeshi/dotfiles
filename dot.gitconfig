@@ -1,0 +1,9 @@
+[user]
+	email = ryoeshi@yahoo.co.jp
+	name = ryoe
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
