@@ -22,9 +22,29 @@ set incsearch
 autocmd FileType make setlocal noexpandtab
 
 " バッファリスト表示
-nmap <F2> :ls<CR>:buf 
-nmap <C-P> :previous<CR>
-nmap <C-N> :next<CR>
+nnoremap <F2> :ls<CR>:buf 
+nnoremap <C-p> :previous<CR>
+nnoremap <C-n> :next<CR>
+
+" 行頭・行末移動方向をキーの相対位置にあわせる
+"nnoremap 0 $ 
+"nnoremap 1 0 
+
+" insertモードで行頭・行末移動キーを設定
+inoremap <silent> <C-a> 0
+inoremap <silent> <C-e> $
+
+" 挿入モードでのカーソル移動
+inoremap <silent> <C-b> <Left>
+inoremap <silent> <C-f> <Right>
+
+" 引用符, 括弧の設定
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap ( ()<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap <> <><Left>
 
 " 文字コードの自動認識
 if &encoding !=# 'utf-8'
