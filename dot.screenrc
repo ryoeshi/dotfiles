@@ -1,5 +1,5 @@
 defencoding utf8
-escape ^Ll
+escape ^Yy
 
 defscrollback 10000
  
