@@ -7,3 +7,4 @@
 	co = checkout
 	ci = commit
 	br = branch
+	prev = diff HEAD^ HEAD
