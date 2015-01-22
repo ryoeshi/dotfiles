@@ -31,12 +31,15 @@ nnoremap <C-n> :next<CR>
 "nnoremap 1 0 
 
 " insertモードで行頭・行末移動キーを設定
-inoremap <silent> <C-a> 0
-inoremap <silent> <C-e> $
+inoremap <silent> <C-a> <Home>
+inoremap <silent> <C-e> <End>
 
-" 挿入モードでのカーソル移動
+" insertモードでのカーソル移動
 inoremap <silent> <C-b> <Left>
 inoremap <silent> <C-f> <Right>
+
+" insertモードでのカーソル移動
+inoremap <silent> <C-d> <Del>
 
 " 引用符, 括弧の設定
 inoremap { {}<Left>
