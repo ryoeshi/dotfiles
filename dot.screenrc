@@ -20,7 +20,7 @@ autodetach on
 
 # log
 logfile "$HOME/.screen/log/screen-%Y%m%d-%n.log"
-#log on
+log on
 deflog on
 
 # bind
@@ -79,4 +79,6 @@ bind -c enc e encoding eucjp
 bind -c enc ^E encoding eucjp
 bind -c enc s encoding sjis
 bind -c enc ^S encoding sjis
+
+multiuser on
 

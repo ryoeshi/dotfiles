@@ -1,3 +1,8 @@
+set nocompatible
+filetype off
+
+hi Comment ctermfg=gray
+
 " " プラグインの設定
 " set nocompatible
 " filetype off
@@ -12,8 +17,8 @@
 syntax on
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set softtabstop=0
 set number
 set smartindent
@@ -25,18 +30,27 @@ autocmd FileType make setlocal noexpandtab
 nnoremap <F2> :ls<CR>:buf 
 nnoremap <C-p> :previous<CR>
 nnoremap <C-n> :next<CR>
+nnoremap <C-C> :bdelete<CR>
+nnoremap <C-K> d$
+nnoremap + <C-A>
+nnoremap - <C-X>
+" quickfixの修正
+nnoremap ]q :cnext<CR>
+nnoremap [q :cprevious<CR>
+"
 
 " 行頭・行末移動方向をキーの相対位置にあわせる
-"nnoremap 0 $ 
-"nnoremap 1 0 
+nnoremap 0 $ 
+nnoremap 1 0 
+nnoremap <C-A> <HOME>
+nnoremap <C-E> <END>
 
 " insertモードで行頭・行末移動キーを設定
-inoremap <silent> <C-a> <Home>
-inoremap <silent> <C-e> <End>
-
-" insertモードでのカーソル移動
-inoremap <silent> <C-b> <Left>
-inoremap <silent> <C-f> <Right>
+inoremap <silent> <C-A> <HOME>
+inoremap <silent> <C-E> <END>
+" 挿入モードでのカーソル移動
+inoremap <silent> <C-B> <LEFT>
+inoremap <silent> <C-F> <RIGHT>
 
 " insertモードでのカーソル移動
 inoremap <silent> <C-d> <Del>

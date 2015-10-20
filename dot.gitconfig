@@ -9,3 +9,18 @@
 	br = branch
 	prev = diff HEAD^ HEAD
 	st = status
+  rh = reset --hard
+  rhh = reset --hard HEAD
+
+  l = log
+  ll = log --decorate=yes
+  lla = log --oneline --decorate --graph --branches --tags --remotes
+  lo = log --oneline --decorate=yes
+  lf = log --decorate=full
+
+  lof = log --oneline --decorate=full
+  mylog = log --graph --name-status --pretty=format:'%C(red)%h %C(green)%an %Creset%s %C(yellow)%d%Creset'
+[core]
+  #autocrlf = input
+  #safecrlf = true
+
