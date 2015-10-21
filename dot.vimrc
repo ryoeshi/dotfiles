@@ -37,9 +37,14 @@ nnoremap - <C-X>
 " quickfixの修正
 nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
-" 画面分割
-nnoremap <C-\> :vsplit<CR>
-nnoremap <C--> :split<CR>
+" 画面分割 (<C-w>系のバインドをそのまま利用) 
+"nnoremap <C-\> :vsplit<CR>
+"nnoremap <C--> :split<CR>
+" タブ設t
+nnoremap s <Nop>
+nnoremap sn gt
+nnoremap sp gT
+nnoremap st :<C-u>tabnew<CR>
 
 " 行頭・行末移動方向をキーの相対位置にあわせる
 nnoremap 0 $ 
