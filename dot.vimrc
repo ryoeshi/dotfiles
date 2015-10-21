@@ -46,9 +46,14 @@ nnoremap sn gt
 nnoremap sp gT
 nnoremap st :<C-u>tabnew<CR>
 
+" 閉じる系の操作
+nnoremap zz :q<CR>
+nnoremap zd :bd<CR>
+nnoremap <C-d> :bd<CR>
+
 " 行頭・行末移動方向をキーの相対位置にあわせる
-nnoremap 0 $ 
-nnoremap 1 0 
+""nnoremap 0 $ 
+""nnoremap 1 0 
 nnoremap <C-A> <HOME>
 nnoremap <C-E> <END>
 
@@ -62,13 +67,13 @@ inoremap <silent> <C-F> <RIGHT>
 " insertモードでのカーソル移動
 inoremap <silent> <C-d> <Del>
 
-" 引用符, 括弧の設定
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap ( ()<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap <> <><Left>
+""" 引用符, 括弧の設定
+""inoremap { {}<Left>
+""inoremap [ []<Left>
+""inoremap ( ()<Left>
+""inoremap " ""<Left>
+""inoremap ' ''<Left>
+""inoremap <> <><Left>
 
 " 文字コードの自動認識
 if &encoding !=# 'utf-8'
