@@ -1,8 +1,6 @@
 set nocompatible
 filetype off
 
-hi Comment ctermfg=gray
-
 " " プラグインの設定
 " set nocompatible
 " filetype off
@@ -23,6 +21,8 @@ set softtabstop=0
 set number
 set smartindent
 set incsearch
+" タブページを常に表示
+set showtabline=2
 
 autocmd FileType make setlocal noexpandtab
 
