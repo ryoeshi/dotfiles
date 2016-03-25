@@ -1,18 +1,17 @@
 set nocompatible
 filetype off
 
-" " プラグインの設定
-" set nocompatible
-" filetype off
-" set rtp+=~/.vim/vundle.git/ 
-" call vundle#rc()
-" 
-" Bundle 'L9'
-" Bundle 'AutoComplPop'
-" Bundle 'FuzzyFinder'
+"" .vim以下の設定ファイルを読み込み
+set rtp+=${HOME}/.vim/
+runtime! rc/*.vim
+
+filetype plugin indent on
+
+NeoBundleCheck
 
 " 基本的な設定
 syntax on
+colorscheme inkpot
 
 set expandtab
 set tabstop=2
@@ -27,7 +26,7 @@ set showtabline=2
 autocmd FileType make setlocal noexpandtab
 
 " バッファリスト表示
-nnoremap <F2> :ls<CR>:buf 
+nnoremap <F2> :Unite buffer<CR> 
 nnoremap <C-p> :previous<CR>
 nnoremap <C-n> :next<CR>
 nnoremap <C-C> :bdelete<CR>
@@ -40,11 +39,15 @@ nnoremap [q :cprevious<CR>
 " 画面分割 (<C-w>系のバインドをそのまま利用) 
 "nnoremap <C-\> :vsplit<CR>
 "nnoremap <C--> :split<CR>
-" タブ設t
+" ファイラーオープン
+nnoremap f <Nop>
+nnoremap ff :NERDTreeToggle<CR>
+" タブ設定
 nnoremap s <Nop>
 nnoremap sn gt
 nnoremap sp gT
 nnoremap st :<C-u>tabnew<CR>
+nnoremap sq :<C-u>tabclose<CR>
 
 " 閉じる系の操作
 nnoremap zz :q<CR>
@@ -52,8 +55,8 @@ nnoremap zd :bd<CR>
 nnoremap <C-d> :bd<CR>
 
 " 行頭・行末移動方向をキーの相対位置にあわせる
-""nnoremap 0 $ 
-""nnoremap 1 0 
+nnoremap 0 $ 
+nnoremap 1 0 
 nnoremap <C-A> <HOME>
 nnoremap <C-E> <END>
 

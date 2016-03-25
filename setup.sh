@@ -1,14 +1,29 @@
 #!/bin/sh -eux
 
-DOT_DIR=dotfiles
+# check command.
+git --version >/dev/null
 
-cd $HOME
+dot_dir=dotfiles
+
+cd ${HOME}
 pwd
 
-for n in $DOT_DIR/dot.*
+echo 'create symbolic links.'
+for n in ${dot_dir}/dot.*
 do
-    ln -s $n `echo $n | sed -e "s/$DOT_DIR\/dot././"`
+  if [ ! -e $n ] ; then
+    ln -s $n `echo $n | sed -e "s/${dot_dir}\/dot././"`
+  fi
 done
+
+#pm_dir=~/.vim/dein/repos/dein.vim
+#pm_repo=https://github.com/Shougo/dein.vim.git
+pm_dir=~/.vim/bundle/neobundle.vim
+pm_repo=https://github.com/Shougo/neobundle.vim
+
+echo 'get plugin manager.'
+mkdir -p ${pm_dir}
+git clone ${pm_repo} ${pm_dir}
 
 echo 'setup completed.'
 
