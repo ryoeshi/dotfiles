@@ -49,6 +49,11 @@ nnoremap sp gT
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sq :<C-u>tabclose<CR>
 
+" バッファ設定
+nnoremap <silent>bp :bprevious<CR>
+nnoremap <silent>bn :bnext<CR>
+nnoremap <silent>bd :bdelete<CR>
+
 " 閉じる系の操作
 nnoremap zz :q<CR>
 nnoremap zd :bd<CR>
