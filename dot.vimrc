@@ -26,9 +26,9 @@ set showtabline=2
 autocmd FileType make setlocal noexpandtab
 
 " バッファリスト表示
-nnoremap <F2> :Unite buffer<CR> 
-nnoremap <C-p> :previous<CR>
-nnoremap <C-n> :next<CR>
+"nnoremap <F2> :Unite buffer<CR> 
+"nnoremap <C-p> :previous<CR>
+"nnoremap <C-n> :next<CR>
 nnoremap <C-C> :bdelete<CR>
 nnoremap <C-K> d$
 nnoremap + <C-A>
