@@ -12,6 +12,12 @@ fi
 
 # Customize to your needs...
 
+# Add pyenv to PATH for scripting
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 #zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 #zstyle ':completion:*' menu select=1
 #
@@ -53,7 +59,7 @@ alias diffdir='diff -rwB -I "^\s*\/" -I "^\s*\*" -I "^\s*\$" -I "\$\s*$" -x"*/CV
 
 # vps ssh
 #alias vpssh='ssh -p 10022 ryoe@stone'
-alias vpssh='ssh -p 10022 -o ConnectTimeout=180 ryoe@localhost'
+#alias vpssh='ssh -p 10022 -o ConnectTimeout=180 ryoe@localhost'
 
 # work screen operation
 alias sc='screen'
